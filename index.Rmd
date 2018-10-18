@@ -43,4 +43,9 @@ locations <- esc %>%
 ```{r}
 datatable(locations)
 ```
+```{r}
+leaflet(locations) %>% 
+  addTiles()%>% 
+  addMarkers(~ Longitude, ~ Latitude, popup = ~ Location)
+```
 
